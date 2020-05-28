@@ -44,9 +44,9 @@ As previously mentioned, due to constraints on the project, the following tools 
 * Orchestration Tool: Docker Swarm
 
 ### Project Tracking <a name="projecttracking"></a>
-Asana was used to track progress for the project. 
+Trello was used to track progress for the project. Trello provided a card based tracking system which allowed easy tracking of what tasks had to be started, which tasks were in progress and which tasks had been completed. Labels were used to manage cards and what each card had represented e.g. Orange labels were used to show items which were part of the minimum viable product. The Trello board can be accessed through the link below: 
 
-[Link to Asana Board](https://app.asana.com/0/1177656267008553/board)
+[Link to Trello Board](https://trello.com/b/xw1xj2pQ/sfia-project-2)
 
 ## Testing <a name="testing"></a>
 
