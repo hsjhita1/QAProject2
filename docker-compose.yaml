@@ -1,0 +1,31 @@
+version: '3.7'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+    - target: 80
+      published: 80
+    volumes: 
+    - type: bind
+      source: ./nginx/nginx.conf
+      target: /etc/nginx/nginx.conf
+  service1:
+    build: ./Service1
+    ports: 
+    - target: 5000
+      published: 5000
+  service2:
+    build: ./Service2
+    ports: 
+    - target: 5001
+      published: 5001
+  service3:
+    build: ./Service3
+    ports: 
+      - target: 5002
+        published: 5002
+  service4:
+    build: ./Service3
+    ports: 
+    - target: 5003
+      published: 5003
