@@ -9,6 +9,7 @@
 * [Testing](#testing)
 * [Deployment](#deployment)
 * [Self Reflection](#selfreflection)
+* [Resources](#resources)
 
 ## Project Brief <a name="projectbrief"></a>
 The purpose of this project was to create a service-orientated architecture for an application. The application must be composed of at least 4 services which work together.
@@ -56,3 +57,15 @@ Trello was used to track progress for the project. Trello provided a card based 
 
 ## Self Reflection <a name="selfreflection"></a>
 
+## Resources <a name="resources"></a>
+### Docker Images
+* [Service 1](https://hub.docker.com/repository/docker/hsjhita1/service1)
+* [Service 2](https://hub.docker.com/repository/docker/hsjhita1/service2)
+* [Service 3](https://hub.docker.com/repository/docker/hsjhita1/service3)
+* [Service 4](https://hub.docker.com/repository/docker/hsjhita1/service4)
+
+### Documentation
+* [Trello Board](https://trello.com/b/xw1xj2pQ/sfia-project-2) 
+
+### Other
+* [Web Server](http://34.89.58.143:5000/)
