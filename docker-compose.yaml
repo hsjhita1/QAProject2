@@ -25,7 +25,7 @@ services:
       - target: 5002
         published: 5002
   service4:
-    build: ./Service3
+    build: ./Service4
     ports: 
     - target: 5003
       published: 5003
