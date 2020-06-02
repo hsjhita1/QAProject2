@@ -9,6 +9,8 @@ services:
     - type: bind
       source: ./nginx/nginx.conf
       target: /etc/nginx/nginx.conf
+    environment: 
+    - FLASK_DB_URI=${FLASK_DB_URI}
   service1:
     build: ./Service1
     ports: 

@@ -4,6 +4,15 @@
             <title>
                 {{ title }}
             </title>
+            <style>
+                table, th, td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    padding: 10px;
+                    text-align: center;
+                }
+
+            </style>
         </head>
         <body>
             <h1>Razzle Dazzle</h1>
@@ -11,9 +20,29 @@
             <br>
             <p>Reload the page to try again</p>
             <br>
-            {% for data in data1 %}
-               {{ data.id }}{{ data.board }}{{ data.score }}{{ data.result }}
-                <br>
-            {% endfor %}
+            <table >
+                <tr>
+                    <th>ID</th>
+                    <th>Difficulty</th>
+                    <th>Score</th>
+                    <th>Result</th>
+                </tr>
+                {% for data in data1 %}
+                <tr>
+                </tr>
+                    <td>
+                        {{ data.id }}
+                    </td>
+                    <td>
+                        {{ data.board }}
+                    </td>
+                    <td>
+                        {{ data.score }}
+                    </td>
+                    <td>
+                        {{ data.result }}
+                    </td>
+                {% endfor %}
+            </table>
         </body>
     </html> 
