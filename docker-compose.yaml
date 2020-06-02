@@ -14,6 +14,8 @@ services:
     ports: 
     - target: 5000
       published: 5000
+    environment: 
+    - FLASK_DB_URI=${FLASK_DB_URI}
   service2:
     build: ./Service2
     ports: 
@@ -29,3 +31,5 @@ services:
     ports: 
     - target: 5003
       published: 5003
+    environment: 
+    - FLASK_DB_URI=${FLASK_DB_URI}
