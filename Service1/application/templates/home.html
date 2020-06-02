@@ -11,5 +11,9 @@
             <br>
             <p>Reload the page to try again</p>
             <br>
+            {% for data in data1 %}
+               {{ data.id }}{{ data.board }}{{ data.score }}{{ data.result }}
+                <br>
+            {% endfor %}
         </body>
     </html> 
