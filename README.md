@@ -6,6 +6,8 @@
   * [Constraints](#constraints)
 * [Architecture](#architecture)
   * [Project Tracking](#projecttracking)
+  * [Cloud Server](#cloudserver)
+  * [Database](#database)
 * [Testing](#testing)
 * [Deployment](#deployment)
 * [Self Reflection](#selfreflection)
@@ -43,11 +45,20 @@ As previously mentioned, due to constraints on the project, the following tools 
 * Cloud server: GCP virtual machines
 * Containerisation: Docker
 * Orchestration Tool: Docker Swarm
+* Database: GCP MYSQL Instance
 
 ### Project Tracking <a name="projecttracking"></a>
-Trello was used to track progress for the project. Trello provided a card based tracking system which allowed easy tracking of what tasks had to be started, which tasks were in progress and which tasks had been completed. Labels were used to manage cards and what each card had represented e.g. Orange labels were used to show items which were part of the minimum viable product. The Trello board can be accessed through the link below: 
+Trello was used to track progress for the project. Trello provided a card based tracking system which allowed easy tracking of what tasks had to be started, which tasks were in progress and which tasks had been completed. Labels were used to manage cards and what each card had represented e.g. Orange labels were used to show items which were part of the minimum viable product. A good thing about Trello are the powerups available and with the ability to have GitHub as a powerup, it allows easy tracking of commits related to task. The Trello board can be accessed through the link below: 
 
 [Link to Trello Board](https://trello.com/b/xw1xj2pQ/sfia-project-2)
+
+### Cloud Server <a name="cloudserver"></a>
+For this project, GCP was the cloud server used. GCP allowed me to create several virtual machines which were used to help deploy the application. Not only was GCP used for virtual machines, but was also used for the DBMS
+
+### Database <a name="database"></a>
+GCP was used to host a MySQL instance which would provide the database for this project. As the application would have to persist some kind of data, I decided the best scenario for me would be to use a tool I was comfortable with. While I could have used a MySQL image on Docker, given how I had already had a previous configuration set up and would only need to change a single IP address, this made using GCP an easy choice for me database.
+
+In terms of the data I would be storing, I would be storing previous results of the game with the data being stored also being read onto the home page so users can see a global list of results.
 
 ## Testing <a name="testing"></a>
 
@@ -68,4 +79,7 @@ Trello was used to track progress for the project. Trello provided a card based 
 * [Trello Board](https://trello.com/b/xw1xj2pQ/sfia-project-2) 
 
 ### Other
-* [Web Server](http://34.89.58.143:5000/)
+* [Main Webpage](http://34.89.58.143:5000/)
+* [Service 2](http://34.89.58.143:5001/)
+* [Service 3](http://34.89.58.143:5002/)
+* [Service 4](http://34.89.58.143:5003/)
