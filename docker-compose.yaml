@@ -10,14 +10,14 @@ services:
       source: ./nginx/nginx.conf
       target: /etc/nginx/nginx.conf
     environment: 
-    - FLASK_DB_URI=${PROJECT2_DB}
+    - PROJECT2_DB=${PROJECT2_DB}
   service1:
     build: ./Service1
     ports: 
     - target: 5000
       published: 5000
     environment: 
-    - FLASK_DB_URI=${PROJECT2_DB}
+    - PROJECT2_DB=${PROJECT2_DB}
   service2:
     build: ./Service2
     ports: 
@@ -34,4 +34,4 @@ services:
     - target: 5003
       published: 5003
     environment: 
-    - FLASK_DB_URI=${PROJECT2_DB}
+    - PROJECT2_DB=${PROJECT2_DB}
