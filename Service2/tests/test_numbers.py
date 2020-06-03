@@ -11,5 +11,5 @@ class TestBase(TestCase):
 
 class TestApp(TestBase):
     def test_home_page(self):
-        response = self.client.get(url_for('scoring'))
+        response = self.client.get(url_for('number_gen'))
         self.assertEqual(response.status_code, 200)
