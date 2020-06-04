@@ -8,6 +8,7 @@ pipeline{
         }
         stage("Deploy Docker Swarm Stack"){
             steps{
+                sh 'source ~/.bashrc'
                 sh './script/docker.sh'
             }
         }
