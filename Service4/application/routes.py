@@ -7,8 +7,8 @@ import requests
 
 @app.route('/', methods=['GET', 'POST'])
 def result():
-    difficulty = requests.get("http://service3:5002").text
-    total = requests.get("http://service2:5001").text
+    difficulty = requests.get("http://service3:8002").text
+    total = requests.get("http://service2:8001").text
     score = int(total)
     if difficulty == 'Easy':
         if score == 9:
