@@ -8,5 +8,4 @@ import requests
 def home():
     resultsData = results.query.all()
     result = requests.get("http://service4:8003").text
-    print(result)
     return render_template('home.html', title = 'Home Page', result = result, data1 = resultsData)
