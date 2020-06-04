@@ -1,2 +1,2 @@
 #!/bin/bash
-docker stack deploy --compose-file docker-compose.yaml services
+env PROJECT2_DB="${PROJECT2_DB}" docker stack deploy -c docker-compose.yaml services
