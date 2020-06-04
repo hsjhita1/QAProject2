@@ -9,6 +9,7 @@ pipeline{
         stage("Source variables"){
             steps{
                 sh './script/env.sh'
+                sh 'export TEST=test'
                 sh 'printenv | sort'
             }
         }
