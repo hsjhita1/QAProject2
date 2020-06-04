@@ -12,7 +12,7 @@ services:
     environment: 
     - PROJECT2_DB=${PROJECT2_DB}
   service1:
-    image: 34.105.129.88:5000/service1
+    image: hsjhita1/service1:latest
     build: ./Service1
     ports: 
     - target: 8000
@@ -20,19 +20,19 @@ services:
     environment: 
     - PROJECT2_DB=${PROJECT2_DB}
   service2:
-    image: 34.105.129.88:5000/service2
+    image: hsjhita1/service2:latest
     build: ./Service2
     ports: 
     - target: 8001
       published: 8001
   service3:
-    image: 34.105.129.88:5000/service3
+    image: hsjhita1/service3:latest
     build: ./Service3
     ports: 
       - target: 8002
         published: 8002
   service4:
-    image: 34.105.129.88:5000/service4
+    image: hsjhita1/service4:latest
     build: ./Service4
     ports: 
     - target: 8003
