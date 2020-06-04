@@ -4,11 +4,11 @@ pipeline{
         stage("Make scripts executable"){
             steps{
                 sh 'chmod +x ./script/*'
+                sh 'source ~/.bashrc'
             }
         }
         stage("Deploy Docker Swarm Stack"){
             steps{
-                sh 'source ~/.bashrc'
                 sh './script/docker.sh'
             }
         }
