@@ -1,0 +1,11 @@
+[all]
+manager_node
+worker_node1
+worker_node2
+
+[swarm-manager]
+manager_node
+
+[swarm-workers]
+worker_node1
+worker_node2

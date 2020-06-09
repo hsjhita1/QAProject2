@@ -1,0 +1,16 @@
+- name: Get Docker key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+  tags: docker
+- name: Add Docker packages to Repository
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+    state: present
+  tags: docker  
+- name: Install Docker-CE
+  apt: 
+    name: "docker-ce" 
+    state: latest 
+    update_cache: yes
+  tags: docker
