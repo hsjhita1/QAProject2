@@ -1,5 +1,5 @@
 - name: Local Installs
-  hosts: 127.0.0.1
+  hosts: manager_node
   connection: local
   become: true
   roles:
