@@ -11,3 +11,13 @@ def number_gen(): # 141 numbers in list
         sum += listOfNumbers[randint(0, length)]
     print(sum)
     return str(sum)
+
+
+    """
+    1 - 11
+    2 - 19
+    3 - 37
+    4 - 44
+    5 - 19
+    6 - 11
+    """
