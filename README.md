@@ -34,6 +34,7 @@ In addition to the project brief, there are a set of requirements which the proj
   
 ### Risk Assessment <a name="riskassessment"></a>
 For this project, there were several risks which had to be indentified before the main body of the project was undertaken. This risk assessment included security of the database and application, and potential costs which the project may incur.
+
 [Link to Risk Assessment](https://github.com/hsjhita1/QAProject2/blob/master/Documentation/RiskAssessmentQAProject2.xlsx)
 
 ### Constraints <a name="constraints"></a>
@@ -85,7 +86,15 @@ Below is the ERD used for this project. A single table was used to store the res
 ![alt text](https://github.com/hsjhita1/QAProject2/blob/master/Documentation/ERD.png "Initial ERD")
 
 ## Testing <a name="testing"></a>
+Testing was done via PyTest and was conducted on each service. I had tried to implement a TDD approach towards this project but was unable to do this at a consistent level. Also, due to the nature of the project being micro-services and having not covered testing on this during my training, I had to find another way to test the services that had made requests from other services. There was the option of mock testing  but I was unable to implement it. However, my next approach of testing service 4 solved this issue. By being able to pass through the variables through the method rather than defining them and calling them in the method, I was able to test my code as if service 1 had requested the data from service 2 and 3 and then passed it to service 4. By doing it this way, I managed to implement my testing.
 
+![alt text](https://github.com/hsjhita1/QAProject2/blob/master/Documentation/Testing.png "Testing")
+
+### Links to all the coverage reports
+* [Service 1](https://github.com/hsjhita1/QAProject2/blob/master/Service1/test_results/test-at-Jun-06-on-20-18%EF%80%BA36.pdf)
+* [Service 2](https://github.com/hsjhita1/QAProject2/blob/master/Service2/test_results/test-at-Jun-06-on-20-10%EF%80%BA50.pdf)
+* [Service 3](https://github.com/hsjhita1/QAProject2/blob/master/Service3/test_results/test-at-Jun-06-on-20-10%EF%80%BA45.pdf)
+* [Service 4](https://github.com/hsjhita1/QAProject2/blob/master/Service4/test_results/test-at-Jun-06-on-20-10:38.pdf)
 
 ## Deployment <a name="deployment"></a>
 ![alt text](https://github.com/hsjhita1/QAProject2/blob/master/Documentation/CI%20Pipeline.png "Pipeline")
@@ -100,7 +109,9 @@ Upon self reflection, I believe the final build of the application had met the n
 While I can say the overall project was a sucess, there are a few things on which I would improve on if I were to do it again.
 1. Implementing the game to the fullest version. 
  
-   The project was based on a game called Razzle Dazzle. The actual game has a different scoring system in which every number gives points and the aim of the game is to get 10 points from a total of 3 rolls. The way this could be implemented is by using a for loop to simulate 3 rolls and using more logic to filter out indvidual scoring for each number. While possible, the logic could get long but will provide a more realistic version of the game.
+   The project was based on a game called Razzle Dazzle. The actual game has a different scoring system in which every number gives points and the aim of the game is to get 10 points from a total of 3 rolls. The way this could be implemented is by using a for loop to simulate 3 rolls and using more logic to filter out indvidual scoring for each number. While possible, the logic could get long but will provide a more realistic version of the game. 
+
+   Another implementation to the game I can add is a potential stat feature which displays a percentage breakdown of all the results. For example, a chart could out of 'x amount of games', 'n games' had a result of Even and so on.
 
 2. Implement extra tables
  
