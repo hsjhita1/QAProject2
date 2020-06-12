@@ -1,5 +1,4 @@
 import pytest, unittest, requests, flask
-import requests_mock
 from unittest.mock import patch
 from application import app, db, routes
 from application.models import results
@@ -25,25 +24,24 @@ class TestBase(TestCase):
         db.session.remove()
         db.drop_all()
 
-class TestViews(TestBase):
-    def test_view(self):
-        response = self.client.get(url_for('result'))
-        self.assertEqual(response.status_code, 200)
+class TestViews(TestBase):    
+    def test_easy(self):
+        assert routes.result('Easy', '10') == "Money Tripled!!! ---- Score : 10 ---- Difficulty : Easy"
+        assert routes.result('Easy', '30') == "Bust! You Lose. ---- Score : 30 ---- Difficulty : Easy"
+        assert routes.result('Easy', '45') == "Money doubled!! ---- Score : 45 ---- Difficulty : Easy"
+        assert routes.result('Easy', '35') == "Money back ---- Score : 35 ---- Difficulty : Easy"
 
+    def test_medium(self):
+        assert routes.result('Medium', '10') == "Money Tripled!!! ---- Score : 10 ---- Difficulty : Medium"
+        assert routes.result('Medium', '35') == "Bust! You Lose. ---- Score : 35 ---- Difficulty : Medium"
+        assert routes.result('Medium', '36') == "Money back ---- Score : 36 ---- Difficulty : Medium"
+        assert routes.result('Medium', '47') == "Money doubled ---- Score : 47 ---- Difficulty : Medium"
 
-def test_result(requests_mock):
-    requests_mock.get('http://service2:8001', text='38')
-    requests_mock.get('http://service3:8002', text='Easy')
-    requests_mock.get('http://service4:8003')
-    difficulty = requests.get('http://service3:8002').text
-    total = requests.get('http://service2:8001').text
+    def test_hard(self):
+        assert routes.result('Hard', '10') == "Money Tripled!!! ---- Score : 10 ---- Difficulty : Hard"
+        assert routes.result('Hard', '40') == "Bust! You Lose. ---- Score : 40 ---- Difficulty : Hard"
+        assert routes.result('Hard', '45') == "Money back ---- Score : 45 ---- Difficulty : Hard"
+        assert routes.result('Hard', '52') == "Money doubled ---- Score : 52 ---- Difficulty : Hard"
 
-    response = requests_mock.post(
-        url_for('result'),
-        data = dict(
-            difficulty = difficulty,
-            total = total
-        ),
-            follow_redirects = True
-    )
-    assert ("Money back ---- Score : " + total + " ----  Difficulty : " + difficulty) == response.data
+    def test_error(self):
+        assert routes.result('Extra Hard', '10') == "Error, please try again"

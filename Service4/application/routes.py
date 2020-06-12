@@ -19,7 +19,7 @@ def result():
             )
             db.session.add(addResult)
             db.session.commit()
-            return "Money Tripled!!! ---- Score : " + total + " ----  Difficulty : " + difficulty
+            return "Money Tripled!!! ---- Score : " + total + " ---- Difficulty : " + difficulty
         elif score <= 30:
             addResult = results(
                 board = difficulty,
@@ -28,7 +28,7 @@ def result():
             )
             db.session.add(addResult)
             db.session.commit()
-            return "Bust! You Lose. ---- Score : " + total + " ----  Difficulty : " + difficulty
+            return "Bust! You Lose. ---- Score : " + total + " ---- Difficulty : " + difficulty
         elif score >= 41:
             addResult = results(
                 board = difficulty,
@@ -46,7 +46,7 @@ def result():
             )
             db.session.add(addResult)
             db.session.commit()
-            return "Money back ---- Score : " + total + " ----  Difficulty : " + difficulty
+            return "Money back ---- Score : " + total + " ---- Difficulty : " + difficulty
     elif difficulty == 'Medium':
         if score == 10 or score >= 56:
             addResult = results(
@@ -56,7 +56,7 @@ def result():
             )
             db.session.add(addResult)
             db.session.commit()
-            return "Money Tripled!!! ---- Score : " + total + " ----  Difficulty : " + difficulty
+            return "Money Tripled!!! ---- Score : " + total + " ---- Difficulty : " + difficulty
         elif score <= 35:
             addResult = results(
                 board = difficulty,
@@ -65,7 +65,7 @@ def result():
             )
             db.session.add(addResult)
             db.session.commit()
-            return "Bust! You Lose. ---- Score : " + total + " ----  Difficulty : " + difficulty
+            return "Bust! You Lose. ---- Score : " + total + " ---- Difficulty : " + difficulty
         elif score > 35 and score <= 45:
             addResult = results(
                 board = difficulty,
@@ -93,7 +93,7 @@ def result():
             )
             db.session.add(addResult)
             db.session.commit()
-            return "Money Tripled!!! ---- Score : " + total + " ----  Difficulty : " + difficulty
+            return "Money Tripled!!! ---- Score : " + total + " ---- Difficulty : " + difficulty
         elif score <= 40:
             addResult = results(
                 board = difficulty,
@@ -102,7 +102,7 @@ def result():
             )
             db.session.add(addResult)
             db.session.commit()
-            return "Bust! You Lose. ---- Score : " + total + " ----  Difficulty : " + difficulty
+            return "Bust! You Lose. ---- Score : " + total + " ---- Difficulty : " + difficulty
         elif score > 41 and score <= 50:
             addResult = results(
                 board = difficulty,
