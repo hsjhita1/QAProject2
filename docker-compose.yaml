@@ -11,6 +11,8 @@ services:
       target: /etc/nginx/nginx.conf
     environment: 
     - PROJECT2_DB=${PROJECT2_DB}
+    deploy:
+      replicas: 2
   service1:
     image: hsjhita1/service1:latest
     build: ./Service1
@@ -19,6 +21,8 @@ services:
       published: 8000
     environment: 
     - PROJECT2_DB=${PROJECT2_DB}
+    deploy:
+      replicas: 2
   service2:
     image: hsjhita1/service2:latest
     build: ./Service2
